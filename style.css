@@ -31,7 +31,7 @@ body {
   opacity: 0.8;
 }
 
-.btn {
+.register-btn {
   background: transparent;
   border: 1px solid #fff;
   color: #fff;
@@ -41,9 +41,76 @@ body {
   transition: 0.3s ease;
 }
 
-.btn:hover {
-  background-color: #fff;
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 10px;
+  width: 350px;
+  position: relative;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content h3 {
   color: #111722;
+  margin-bottom: 10px;
+}
+
+.modal-content label {
+  color: #111722;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.close {
+  color: #aaa;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 25px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: black;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 6px 0 12px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
 }
 
 .hero-section,
@@ -302,6 +369,179 @@ body {
   margin: 0 auto 15px;
 }
 
+.schedule-section {
+  text-align: center;
+  padding: 80px 20px;
+  position: relative;
+}
+
+.schedule-container {
+  max-width: 754px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.subtitle {
+  max-width: 600px;
+  margin: 10px auto 30px;
+  font-size: 0.95rem;
+  color: #c4c4c4;
+}
+
+.date {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 40px;
+  color: #ddd;
+}
+
+.schedule {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.schedule-item {
+  display: flex;
+  align-items: center;
+  background-color: #222b38;
+  padding: 20px 30px;
+  border-radius: 8px;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.time {
+  font-weight: 700;
+  flex: 0 0 140px;
+  text-align: left;
+  color: #fff;
+}
+
+.details {
+  text-align: left;
+}
+
+.details h4 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.details p {
+  margin: 5px 0 0;
+  font-size: 0.85rem;
+  color: #bbb;
+}
+
+.btn {
+  margin-top: 40px;
+  background-color: #f13a59;
+  border: none;
+  color: #fff;
+  padding: 20px 45px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #d92d4d;
+  color: #fff;
+}
+
+.footer {
+  padding: 80px 100px;
+  text-align: left;
+  position: relative;
+}
+
+.newsletter h2 {
+  font-size: 24px;
+  line-height: 1.4;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  max-width: 500px;
+}
+
+.form input {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-bottom: 2px solid #fff;
+  background: transparent;
+  color: #fff;
+  font-size: 16px;
+  outline: none;
+}
+
+.form input::placeholder {
+  color: #ccc;
+}
+
+.form button {
+  background: #f73e64;
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form button:hover {
+  background: #d82e55;
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 60px;
+  border-top: 1px solid #3b4652;
+  padding-top: 20px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.socials a {
+  color: white;
+  font-size: 18px;
+  margin-right: 10px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.socials a:hover {
+  color: #f73e64;
+}
+
+.links a {
+  margin-left: 20px;
+  color: #ccc;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.links a:hover {
+  color: #f73e64;
+}
+
 @media (max-width: 900px) {
   .hero-section {
     flex-direction: column;
@@ -365,5 +605,63 @@ body {
     width: 60px;
     height: 60px;
     font-size: 2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .schedule-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .time {
+    margin-bottom: 5px;
+    flex: 0 0 50px;
+  }
+
+  .schedule-container {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 900px) {
+  .footer {
+    padding: 60px 30px;
+  }
+
+  .newsletter h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .form {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .form input {
+    width: 100%;
+    border-bottom: 2px solid #fff;
+  }
+
+  .form button {
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .links a {
+    margin: 0 6px;
+  }
+
+  .socials {
+    margin-bottom: 10px;
   }
 }
